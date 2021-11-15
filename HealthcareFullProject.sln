@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{66874A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOnion.Domain.Core", "HealthOnion.Domain.Core\HealthOnion.Domain.Core.csproj", "{A175DDE8-5BFF-4884-A344-C2C070642D45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOnion.Domain.Interfaces", "HealthOnion.Domain.Interfaces\HealthOnion.Domain.Interfaces.csproj", "{31B9C119-0B68-4A56-B8D4-DCD456C68010}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B9C119-0B68-4A56-B8D4-DCD456C68010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B9C119-0B68-4A56-B8D4-DCD456C68010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B9C119-0B68-4A56-B8D4-DCD456C68010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B9C119-0B68-4A56-B8D4-DCD456C68010}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A175DDE8-5BFF-4884-A344-C2C070642D45} = {66874A6D-ED30-475D-A448-ACA0E22F1301}
+		{31B9C119-0B68-4A56-B8D4-DCD456C68010} = {66874A6D-ED30-475D-A448-ACA0E22F1301}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD657F7B-40B6-4890-9E2A-C3A5DFAF3664}
