@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOnion.Infrastructure.Data", "HealthOnion.Infrastructure.Data\HealthOnion.Infrastructure.Data.csproj", "{39111257-86B3-4990-B97E-3645E373BF4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOnion.Infrastructure.Business", "HealthOnion.Infrastructure.Business\HealthOnion.Infrastructure.Business.csproj", "{E6F2CC40-F670-4BE2-A104-2BD34B8150CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{39111257-86B3-4990-B97E-3645E373BF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39111257-86B3-4990-B97E-3645E373BF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39111257-86B3-4990-B97E-3645E373BF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F2CC40-F670-4BE2-A104-2BD34B8150CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F2CC40-F670-4BE2-A104-2BD34B8150CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F2CC40-F670-4BE2-A104-2BD34B8150CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F2CC40-F670-4BE2-A104-2BD34B8150CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{31B9C119-0B68-4A56-B8D4-DCD456C68010} = {66874A6D-ED30-475D-A448-ACA0E22F1301}
 		{BFC1AE47-FE46-40F7-BE78-607ED890D038} = {22D5DFD4-1B03-4980-A85D-EDA443C300B7}
 		{39111257-86B3-4990-B97E-3645E373BF4A} = {20E46CE0-F308-4921-91B6-1E2E01B74239}
+		{E6F2CC40-F670-4BE2-A104-2BD34B8150CD} = {20E46CE0-F308-4921-91B6-1E2E01B74239}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD657F7B-40B6-4890-9E2A-C3A5DFAF3664}
