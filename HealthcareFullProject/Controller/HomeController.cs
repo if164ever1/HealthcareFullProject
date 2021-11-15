@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HealthOnion.Domain.Interfaces;
+using HealthOnion.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace HealthcareFullProject.Controller
 {
-
-
-
-
+    
     [Route("api/[controller]")]
     [ApiController]
     public class HomeController : ControllerBase
     {
+        IPatientRepository repo;
+        ICreatePatient create;
+
         // GET: api/<HomeController>
         [HttpGet]
         public IEnumerable<string> Get()
