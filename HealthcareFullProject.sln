@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareFullProject", "HealthcareFullProject\HealthcareFullProject.csproj", "{438742F9-DDE4-46FF-8A96-ED68EDD155D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{66874A6D-ED30-475D-A448-ACA0E22F1301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOnion.Domain.Core", "HealthOnion.Domain.Core\HealthOnion.Domain.Core.csproj", "{A175DDE8-5BFF-4884-A344-C2C070642D45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{438742F9-DDE4-46FF-8A96-ED68EDD155D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438742F9-DDE4-46FF-8A96-ED68EDD155D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438742F9-DDE4-46FF-8A96-ED68EDD155D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A175DDE8-5BFF-4884-A344-C2C070642D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A175DDE8-5BFF-4884-A344-C2C070642D45} = {66874A6D-ED30-475D-A448-ACA0E22F1301}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD657F7B-40B6-4890-9E2A-C3A5DFAF3664}
