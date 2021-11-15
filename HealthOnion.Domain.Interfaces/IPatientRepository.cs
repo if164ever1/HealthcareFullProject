@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using HealthOnion.Domain.Core;
 
 namespace HealthOnion.Domain.Interfaces
 {
     public interface IPatientRepository : IDisposable
     {
-        IEquatable<Patient> GetPatientList();
+        IEnumerable<Patient> GetPatientList();
         Patient GetPatient(int id);
         void Create(Patient patient);
         void Update(Patient patient);
