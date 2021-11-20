@@ -1,5 +1,4 @@
 ﻿using HealthOnion.Domain.Core;
-using System;
 using System.Data.Entity;
 
 namespace HealthOnion.Infrastructure.Data

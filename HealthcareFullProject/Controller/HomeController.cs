@@ -1,4 +1,5 @@
-﻿using HealthOnion.Domain.Interfaces;
+﻿using HealthOnion.Domain.Core;
+using HealthOnion.Domain.Interfaces;
 using HealthOnion.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -15,8 +16,7 @@ namespace HealthcareFullProject.Controller
     [ApiController]
     public class HomeController : ControllerBase
     {
-        IPatientRepository repo;
-        ICreatePatient create;
+
 
         // GET: api/<HomeController>
         [HttpGet]
@@ -34,7 +34,7 @@ namespace HealthcareFullProject.Controller
 
         // POST api/<HomeController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Patient patient)
         {
         }
 
