@@ -16,6 +16,11 @@ namespace HealthcareFullProject.Controller
     [Route("api/v1/[controller]")]
     public class HomeController : ControllerBase
     {
+        private IPatientRepository repository;
+        public HomeController(IPatientRepository repo)
+        {
+            repository = repo;
+        }
 
 
         // GET: api/<HomeController>
@@ -26,28 +31,28 @@ namespace HealthcareFullProject.Controller
         }
 
         // GET api/<HomeController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
-        // POST api/<HomeController>
-        [HttpPost]
-        public void Post([FromBody] Patient patient)
-        {
-        }
+        //// POST api/<HomeController>
+        //[HttpPost]
+        //public void Post([FromBody] Patient patient)
+        //{
+        //}
 
-        // PUT api/<HomeController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //// PUT api/<HomeController>/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
 
-        // DELETE api/<HomeController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<HomeController>/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }
