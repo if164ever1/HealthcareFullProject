@@ -1,22 +1,23 @@
 ﻿using HealthOnion.Domain.Core;
 using HealthOnion.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HealthOnion.Infrastructure.Data
 {
-    class PatientRepository : IPatientRepository
+    public class PatientRepository : IPatientRepository
     {
-        private PatientContext db;
+        private readonly PatientContext db;
+
         private bool disposed = false;
 
-        public PatientRepository()
+        public PatientRepository(PatientContext context)
         {
-            this.db = new PatientContext();
+            this.db = context;
         }
         
         public void Create(Patient patient)
