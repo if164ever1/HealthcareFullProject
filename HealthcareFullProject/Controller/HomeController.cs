@@ -15,7 +15,7 @@ namespace HealthcareFullProject.Controller
     [Route("api/v1/[controller]")]
     public class HomeController : ControllerBase
     {
-        private IPatientRepository repository;
+        private readonly IPatientRepository repository;
         public HomeController(IPatientRepository repo)
         {
             repository = repo;
@@ -29,6 +29,19 @@ namespace HealthcareFullProject.Controller
             return repository.Patients();
         }
 
-       
+
+        //// POST api/<HomeController>
+        [HttpPost]
+        public void Post([FromBody] Patient patient)
+        {
+            repository.Create(patient);
+            repository.Save();
+
+        }
+
+
+
+
+
     }
 }
