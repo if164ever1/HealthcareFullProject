@@ -57,7 +57,7 @@ namespace HealthOnion.Infrastructure.Data
             return this.db.Patients.Find(id);
         }
 
-        public IEnumerable<Patient> GetPatientList()
+        public IEnumerable<Patient> Patients()
         {
             return this.db.Patients.ToList();
         }
