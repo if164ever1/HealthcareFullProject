@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 namespace HealthcareFullProject.Controller
 {
     
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/v1/[controller]")]
     public class HomeController : ControllerBase
     {
 
