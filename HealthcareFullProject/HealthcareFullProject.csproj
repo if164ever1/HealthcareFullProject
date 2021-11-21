@@ -13,10 +13,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HealthOnion.Domain.Interfaces\HealthOnion.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\HealthOnion.Infrastructure.Data\HealthOnion.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\HealthOnion.Services.Interfaces\HealthOnion.Services.Interfaces.csproj" />
   </ItemGroup>
 
