@@ -6,7 +6,7 @@ namespace HealthOnion.Domain.Interfaces
 {
     public interface IPatientRepository : IDisposable
     {
-        IEnumerable<Patient> GetPatientList();
+        IEnumerable<Patient> Patients();
         Patient GetPatient(int id);
         void Create(Patient patient);
         void Update(Patient patient);
