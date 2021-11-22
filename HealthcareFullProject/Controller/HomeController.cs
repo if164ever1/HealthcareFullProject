@@ -5,6 +5,7 @@ using HealthOnion.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -32,7 +33,7 @@ namespace HealthcareFullProject.Controller
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Patient patient  =  repository.Patients().SingleOrDefault(x => x.Id == id);
+            Patient patient  = repository.Patients().SingleOrDefault(x => x.Id == id);
             if (patient ==  null)
             {
                 return BadRequest("There is now patient with this id!");
@@ -43,10 +44,11 @@ namespace HealthcareFullProject.Controller
 
         //// POST api/<HomeController>
         [HttpPost]
-        public void Post([FromBody] Patient patient)
+        public IActionResult Post([FromBody] Patient patient)
         {
             repository.Create(patient);
             repository.Save();
+            return Ok("Save changess saccessfull!");
         }
 
 
