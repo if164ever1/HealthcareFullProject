@@ -1,27 +1,23 @@
 ﻿using HealthOnion.Domain.Core;
 using HealthOnion.Domain.Interfaces;
-using HealthOnion.Infrastructure.Data;
-using HealthOnion.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace HealthcareFullProject.Controller
+namespace HealthcareFullProject.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class HomeController : ControllerBase
+    public class HomeController : Controller
     {
         private readonly IPatientRepository repository;
         public HomeController(IPatientRepository repo)
         {
             repository = repo;
         }
-
 
         // GET: api/<HomeController>
         [HttpGet]
@@ -41,7 +37,6 @@ namespace HealthcareFullProject.Controller
             return Ok(patient);
         }
 
-
         //// POST api/<HomeController>
         [HttpPost]
         public IActionResult Post([FromBody] Patient patient)
@@ -50,10 +45,5 @@ namespace HealthcareFullProject.Controller
             repository.Save();
             return Ok("Save changess saccessfull!");
         }
-
-
-
-
-
     }
 }
