@@ -6,11 +6,11 @@ namespace HealthOnion.Domain.Interfaces
 {
     public interface IUserRepository : IDisposable
     {
-        IEnumerable<User> Patients();
-        User GetPatient(int id);
-        void Create(User patient);
-        void Update(User patient);
-        void Delete(int id);
-        void Save();
+        IEnumerable<User> GetAllUsers();
+        User GetUserById(int id);
+        void AddUserToRepository(User user);
+        void UpdateUserRepository(User user);
+        void DeleteUserById(int id);
+        void SaveUserToRepository();
     }
 }

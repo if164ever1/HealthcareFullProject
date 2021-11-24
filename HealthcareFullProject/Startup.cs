@@ -35,9 +35,9 @@ namespace Healthcare
 
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
 
-            services.AddTransient<IUserRepository, PatientRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
-            services.AddDbContext<PatientContext>(options =>
+            services.AddDbContext<UserContext>(options =>
                 options.UseSqlServer(connectionString)
             );
 

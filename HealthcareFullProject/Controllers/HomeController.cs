@@ -13,37 +13,37 @@ namespace HealthcareFullProject.Controllers
     [Route("api/v1/[controller]")]
     public class HomeController : Controller
     {
-        private readonly IUserRepository repository;
-        public HomeController(IUserRepository repo)
-        {
-            repository = repo;
-        }
+        //private readonly IUserRepository repository;
+        //public HomeController(IUserRepository repo)
+        //{
+        //    repository = repo;
+        //}
 
-        // GET: api/<HomeController>
-        [HttpGet]
-        public IEnumerable<User> Get()
-        {
-            return repository.Patients();
-        }
+        //// GET: api/<HomeController>
+        //[HttpGet]
+        //public IEnumerable<User> Get()
+        //{
+        //    return repository.Patients();
+        //}
 
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
-        {
-            User patient  = repository.Patients().SingleOrDefault(x => x.Id == id);
-            if (patient ==  null)
-            {
-                return BadRequest("There is now patient with this id!");
-            }
-            return Ok(patient);
-        }
+        //[HttpGet("{id}")]
+        //public IActionResult Get(int id)
+        //{
+        //    User patient  = repository.Patients().SingleOrDefault(x => x.Id == id);
+        //    if (patient ==  null)
+        //    {
+        //        return BadRequest("There is now patient with this id!");
+        //    }
+        //    return Ok(patient);
+        //}
 
-        //// POST api/<HomeController>
-        [HttpPost]
-        public IActionResult Post([FromBody] User patient)
-        {
-            repository.Create(patient);
-            repository.Save();
-            return Ok("Save changess saccessfull!");
-        }
+        ////// POST api/<HomeController>
+        //[HttpPost]
+        //public IActionResult Post([FromBody] User patient)
+        //{
+        //    repository.CreateUser(patient);
+        //    repository.Save();
+        //    return Ok("Save changess saccessfull!");
+        //}
     }
 }

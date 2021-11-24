@@ -4,9 +4,9 @@ using System;
 
 namespace HealthOnion.Infrastructure.Business
 {
-    public class InitialPatient : ICreatePatient
+    public class InitialUser : ICreateUser
     {
-        public void CreatePAtient(User patient)
+        public void CreateUser(User user)
         {
             throw new NotImplementedException();
         }

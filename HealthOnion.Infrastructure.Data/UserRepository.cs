@@ -8,28 +8,28 @@ using System.Linq;
 
 namespace HealthOnion.Infrastructure.Data
 {
-    public class PatientRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
-        private readonly PatientContext db;
+        private readonly UserContext db;
 
         private bool disposed = false;
 
-        public PatientRepository(PatientContext context)
+        public UserRepository(UserContext context)
         {
             this.db = context;
         }
-        
-        public void Create(User patient)
+
+        public void AddUserToRepository(User user)
         {
-            this.db.Patients.Add(patient);
+            this.db.Users.Add(user);
         }
 
-        public void Delete(int id)
+        public void DeleteUserById(int id)
         {
-            User patient = db.Patients.Find(id);
+            User patient = db.Users.Find(id);
             if (patient != null)
             {
-                db.Patients.Remove(patient);
+                db.Users.Remove(patient);
             }
         }
 
@@ -51,24 +51,24 @@ namespace HealthOnion.Infrastructure.Data
             this.disposed = true;
         }
 
-        public User GetPatient(int id)
+        public IEnumerable<User> GetAllUsers()
         {
-            return this.db.Patients.Find(id);
+            return this.db.Users.ToList();
         }
 
-        public IEnumerable<User> Patients()
+        public User GetUserById(int id)
         {
-            return this.db.Patients.ToList();
+            return this.db.Users.Find(id);
         }
 
-        public void Save()
+        public void SaveUserToRepository()
         {
             this.db.SaveChanges();
         }
 
-        public void Update(User patient)
+        public void UpdateUserRepository(User user)
         {
-            this.db.Entry(patient).State = EntityState.Modified;
+            this.db.Entry(user).State = EntityState.Modified;
         }
     }
 }
