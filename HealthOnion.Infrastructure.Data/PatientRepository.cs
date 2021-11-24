@@ -4,12 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HealthOnion.Infrastructure.Data
 {
-    public class PatientRepository : IPatientRepository
+    public class PatientRepository : IUserRepository
     {
         private readonly PatientContext db;
 

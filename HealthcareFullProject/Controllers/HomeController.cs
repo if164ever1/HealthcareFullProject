@@ -13,8 +13,8 @@ namespace HealthcareFullProject.Controllers
     [Route("api/v1/[controller]")]
     public class HomeController : Controller
     {
-        private readonly IPatientRepository repository;
-        public HomeController(IPatientRepository repo)
+        private readonly IUserRepository repository;
+        public HomeController(IUserRepository repo)
         {
             repository = repo;
         }

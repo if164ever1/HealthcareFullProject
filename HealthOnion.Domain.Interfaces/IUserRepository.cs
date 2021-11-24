@@ -4,7 +4,7 @@ using HealthOnion.Domain.Core;
 
 namespace HealthOnion.Domain.Interfaces
 {
-    public interface IPatientRepository : IDisposable
+    public interface IUserRepository : IDisposable
     {
         IEnumerable<User> Patients();
         User GetPatient(int id);

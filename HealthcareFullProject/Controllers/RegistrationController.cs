@@ -13,8 +13,8 @@ namespace Healthcare.Controllers
     [Route("api/v1/[controller]")]
     public class RegistrationController : Controller
     {
-        private readonly IPatientRepository repository;
-        public RegistrationController(IPatientRepository repo)
+        private readonly IUserRepository repository;
+        public RegistrationController(IUserRepository repo)
         {
             repository = repo;
         }
