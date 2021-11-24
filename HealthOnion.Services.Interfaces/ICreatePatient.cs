@@ -4,6 +4,6 @@ namespace HealthOnion.Services.Interfaces
 {
     public interface ICreatePatient
     {
-        void CreatePAtient(Patient patient);
+        void CreatePAtient(User patient);
     }
 }

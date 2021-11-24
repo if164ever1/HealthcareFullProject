@@ -21,7 +21,7 @@ namespace HealthcareFullProject.Controllers
 
         // GET: api/<HomeController>
         [HttpGet]
-        public IEnumerable<Patient> Get()
+        public IEnumerable<User> Get()
         {
             return repository.Patients();
         }
@@ -29,7 +29,7 @@ namespace HealthcareFullProject.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Patient patient  = repository.Patients().SingleOrDefault(x => x.Id == id);
+            User patient  = repository.Patients().SingleOrDefault(x => x.Id == id);
             if (patient ==  null)
             {
                 return BadRequest("There is now patient with this id!");
@@ -39,7 +39,7 @@ namespace HealthcareFullProject.Controllers
 
         //// POST api/<HomeController>
         [HttpPost]
-        public IActionResult Post([FromBody] Patient patient)
+        public IActionResult Post([FromBody] User patient)
         {
             repository.Create(patient);
             repository.Save();

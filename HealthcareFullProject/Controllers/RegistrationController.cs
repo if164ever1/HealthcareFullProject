@@ -27,7 +27,7 @@ namespace Healthcare.Controllers
                 return BadRequest(new { message = "Login already use" } );
             }
 
-            Patient userModel = new Patient
+            User userModel = new User
             {
                 FirstName = registerRequest.FirstName,
                 LastName = registerRequest.LastName,

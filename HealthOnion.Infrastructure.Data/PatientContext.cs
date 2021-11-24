@@ -8,6 +8,6 @@ namespace HealthOnion.Infrastructure.Data
         public PatientContext(DbContextOptions<PatientContext> options): base(options)
         {
         }
-        public DbSet<Patient> Patients { get; set; }
+        public DbSet<User> Patients { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace HealthOnion.Infrastructure.Business
 {
     public class InitialPatient : ICreatePatient
     {
-        public void CreatePAtient(Patient patient)
+        public void CreatePAtient(User patient)
         {
             throw new NotImplementedException();
         }

@@ -20,14 +20,14 @@ namespace HealthOnion.Infrastructure.Data
             this.db = context;
         }
         
-        public void Create(Patient patient)
+        public void Create(User patient)
         {
             this.db.Patients.Add(patient);
         }
 
         public void Delete(int id)
         {
-            Patient patient = db.Patients.Find(id);
+            User patient = db.Patients.Find(id);
             if (patient != null)
             {
                 db.Patients.Remove(patient);
@@ -52,12 +52,12 @@ namespace HealthOnion.Infrastructure.Data
             this.disposed = true;
         }
 
-        public Patient GetPatient(int id)
+        public User GetPatient(int id)
         {
             return this.db.Patients.Find(id);
         }
 
-        public IEnumerable<Patient> Patients()
+        public IEnumerable<User> Patients()
         {
             return this.db.Patients.ToList();
         }
@@ -67,7 +67,7 @@ namespace HealthOnion.Infrastructure.Data
             this.db.SaveChanges();
         }
 
-        public void Update(Patient patient)
+        public void Update(User patient)
         {
             this.db.Entry(patient).State = EntityState.Modified;
         }
