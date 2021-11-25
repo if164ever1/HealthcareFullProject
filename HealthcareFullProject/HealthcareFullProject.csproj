@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HealthOnion.Domain.Core\HealthOnion.Domain.Core.csproj" />
     <ProjectReference Include="..\HealthOnion.Domain.Interfaces\HealthOnion.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\HealthOnion.Infrastructure.Business\HealthOnion.Infrastructure.Business.csproj" />
     <ProjectReference Include="..\HealthOnion.Infrastructure.Data\HealthOnion.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\HealthOnion.Services.Interfaces\HealthOnion.Services.Interfaces.csproj" />
   </ItemGroup>

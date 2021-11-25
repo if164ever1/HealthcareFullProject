@@ -3,6 +3,7 @@ using HealthOnion.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,25 +22,24 @@ namespace Healthcare
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<UserContext>(options =>
+                options.UseSqlServer(connectionString)
+            );
+            services.AddDbContext<UserContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllersWithViews();
-            services.AddDistributedMemoryCache();
 
             services.AddSwaggerGen(c =>
             {
                // c.OperationFilter<CustomHeaderSwaggerAttribute>();
             });
 
-
-
-
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            
 
             services.AddTransient<IUserRepository, UserRepository>();
-
-            services.AddDbContext<UserContext>(options =>
-                options.UseSqlServer(connectionString)
-            );
+            //services.AddSingleton<IUserRepository, UserRepository>();
+            
 
         }
 
@@ -67,10 +67,6 @@ namespace Healthcare
                 c.RoutePrefix = string.Empty;
             });
             #endregion
-
-
-
-
 
             app.UseRouting();
 

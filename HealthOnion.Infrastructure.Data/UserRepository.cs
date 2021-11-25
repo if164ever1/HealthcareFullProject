@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace HealthOnion.Infrastructure.Data
 {
     public class UserRepository : IUserRepository
     {
-        private readonly UserContext db;
+        private UserContext db;
 
         private bool disposed = false;
 
@@ -51,9 +51,9 @@ namespace HealthOnion.Infrastructure.Data
             this.disposed = true;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
-            return this.db.Users.ToList();
+            return await this.db.Users.OrderBy(u => u.FirstName).ToListAsync();
         }
 
         public User GetUserById(int id)
